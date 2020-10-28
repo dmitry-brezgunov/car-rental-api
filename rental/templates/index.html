@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Главная {% endblock %}
+{% block content %}
+<div>
+    {% if user.is_authenticated %}
+    <p><a href="{% url 'logout' %}">Выйти</a></p>
+    <p><a href="{% url 'addcar' %}">Добавить машину</a></p>
+    <p><a href="{% url 'addrent' %}">Взять машину в аренду</a></p>
+    <p><a href="{% url 'profile' %}">Мой профиль</a></p>
+    {% else %}
+    <p><a href="{% url 'signup' %}">Зарегистрироваться</a></p>
+    <p><a href="{% url 'login' %}">Войти</a></p>
+    {% endif %}
+</div>
+{% endblock %}

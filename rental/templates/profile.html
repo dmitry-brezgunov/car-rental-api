@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %} Мой профиль {% endblock %}
+{% block content %}
+<div>
+    <h1>{{ object.username }}</h1>
+    <p>            
+        <br/>Email - {{ object.email }}
+        <br/>Язык - {{ object.get_lang_display }}
+    </p>
+    <p><a href="{% url 'profile-edit' %}">Редактировать профиль</a></p>
+</div>
+{% endblock %}
