@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from .models import Car, User, Rental
-
+from .models import Car, Rental, User
 
 admin.site.register(Car)
 admin.site.register(User)

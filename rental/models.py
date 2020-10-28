@@ -25,5 +25,7 @@ class Car(models.Model):
 
 
 class Rental(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='rentals')
+
     cars = models.ManyToManyField(Car, related_name='rentals')
